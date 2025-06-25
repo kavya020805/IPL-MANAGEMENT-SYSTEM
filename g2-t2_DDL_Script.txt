@@ -1,0 +1,117 @@
+DDL Script:
+
+
+CREATE SCHEMA IPL;
+
+SET SEARCH_PATH TO IPL;
+
+CREATE TABLE Player (
+    Player_Name VARCHAR(100) PRIMARY KEY,
+    Nationality VARCHAR(50) NOT NULL,
+    Date_Of_Birth DATE NOT NULL,
+    Bowling_Style VARCHAR(50),
+    Batting_Style VARCHAR(50)
+);
+
+CREATE TABLE Coach (
+    Coach_Name VARCHAR(100) PRIMARY KEY,
+    Country VARCHAR(50) NOT NULL,
+    Experience_Years INT
+);
+
+CREATE TABLE Team (
+    Team_Name VARCHAR(100) PRIMARY KEY,
+    Owner VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Season (
+    Year INT PRIMARY KEY,
+    Title_Sponsor VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Stadium (
+    Stadium_Name VARCHAR(100) PRIMARY KEY,
+    Capacity INT NOT NULL,
+    City VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Registers (
+    Team_Name VARCHAR(100) NOT NULL,
+    Year INT NOT NULL,
+    Coach_Name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (Team_Name, Year),
+    FOREIGN KEY (Team_Name) REFERENCES Team(Team_Name),
+    FOREIGN KEY (Year) REFERENCES Season(Year),
+    FOREIGN KEY (Coach_Name) REFERENCES Coach(Coach_Name)
+);
+
+CREATE TABLE Home_Ground (
+    Stadium_Name VARCHAR(100) NOT NULL,
+    Team_Name VARCHAR(100) NOT NULL,
+    Year INT NOT NULL,
+    PRIMARY KEY (Stadium_Name, Team_Name, Year),
+    FOREIGN KEY (Stadium_Name) REFERENCES Stadium(Stadium_Name),
+    FOREIGN KEY (Team_Name) REFERENCES Team(Team_Name),
+    FOREIGN KEY (Year) REFERENCES Season(Year)
+);
+
+CREATE TABLE Match (
+    Match_Timestamp TIMESTAMP PRIMARY KEY,
+    Type VARCHAR(50),
+    Stadium_Name VARCHAR(100) NOT NULL,
+    Man_Of_The_Match VARCHAR(100),
+    FOREIGN KEY (Stadium_Name) REFERENCES Stadium(Stadium_Name),
+    FOREIGN KEY (Man_Of_The_Match) REFERENCES Player(Player_Name)
+);
+
+CREATE TABLE Played_By (
+    Team_Name VARCHAR(100) NOT NULL,
+    Match_Timestamp TIMESTAMP,
+    Result VARCHAR(50) NOT NULL,
+    PRIMARY KEY (Team_Name, Match_Timestamp),
+    FOREIGN KEY (Team_Name) REFERENCES Team(Team_Name),
+    FOREIGN KEY (Match_Timestamp) REFERENCES Match(Match_Timestamp)
+);
+
+CREATE TABLE Performance (
+    Player_Name VARCHAR(100) NOT NULL,
+    Match_Timestamp TIMESTAMP,
+    Runs_Scored INT,
+    Runs_Conceded INT,
+    Wickets INT,
+    Fours INT,
+    Sixes INT,
+    Balls_Faced INT,
+    Balls_Bowled INT,
+    PRIMARY KEY (Player_Name, Match_Timestamp),
+    FOREIGN KEY (Player_Name) REFERENCES Player(Player_Name),
+    FOREIGN KEY (Match_Timestamp) REFERENCES Match(Match_Timestamp)
+);
+
+CREATE TABLE Official (
+    Name VARCHAR(100) PRIMARY KEY,
+    Salary DECIMAL(10,2),
+    Experience INT
+);
+
+CREATE TABLE Officiated_By (
+    Match_Timestamp TIMESTAMP,
+    Official_Name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (Match_Timestamp, Official_Name),
+    FOREIGN KEY (Match_Timestamp) REFERENCES Match(Match_Timestamp),
+    FOREIGN KEY (Official_Name) REFERENCES Official(Name)
+);
+
+CREATE TABLE PlayedIn (
+    Player_Name VARCHAR(100),
+    Team_Name VARCHAR(100),
+    Year INT,
+    Base_Price INT,
+    Final_Price INT,
+    Role VARCHAR(20),
+    PRIMARY KEY (Player_Name, Team_Name, Year),
+    FOREIGN KEY (Player_Name) REFERENCES Player(Player_Name),
+    FOREIGN KEY (Team_Name, Year) REFERENCES Registers(Team_Name, Year)
+);
+
+

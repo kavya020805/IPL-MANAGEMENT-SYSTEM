@@ -1,0 +1,987 @@
+DML Script:
+
+-- =============================================
+-- Team Table Data
+-- =============================================
+INSERT INTO Team (Team_Name, Owner)
+VALUES 
+    ('Mumbai Indians', 'Reliance Industries'),
+    ('Chennai Super Kings', 'India Cements'),
+    ('Royal Challengers Bangalore', 'United Spirits'),
+    ('Kolkata Knight Riders', 'Red Chillies Entertainment'),
+    ('Delhi Capitals', 'JSW Group and GMR Group'),
+    ('Rajasthan Royals', 'Royal Multisport Pvt. Ltd.'),
+    ('Sunrisers Hyderabad', 'Sun TV Network'),
+    ('Punjab Kings', 'Mohit Burman, Ness Wadia, Preity Zinta, Karan Paul'),
+    ('Lucknow Super Giants', 'RPSG Group'),
+    ('Gujarat Titans', 'CVC Capital Partners'),
+    ('Deccan Chargers', 'Deccan Chronicle Holdings Limited'),
+    ('Kochi Tuskers Kerala', 'Kochi Cricket Pvt. Ltd.'),
+    ('Pune Warriors India', 'Sahara Adventure Sports Ltd.'),
+    ('Gujarat Lions', 'Intex Technologies (Keshav Bansal)'),
+    ('Rising Pune Supergiants', 'RP-Sanjiv Goenka Group (Sanjiv Goenka)');
+
+
+-- =============================================
+-- Season Table Data
+-- =============================================
+INSERT INTO Season (Year, Title_Sponsor)
+VALUES
+    (2015, 'Pepsi'),
+    (2016, 'Vivo'),
+    (2017, 'Vivo'),
+    (2018, 'Vivo'),
+    (2019, 'Vivo'),
+    (2020, 'Dream11'),
+    (2021, 'Vivo'),
+    (2022, 'TATA'),
+    (2023, 'TATA'),
+    (2024, 'TATA'),
+    (2025, 'JIO');
+
+
+-- =============================================
+-- Coach Table Data
+-- =============================================
+INSERT INTO Coach (Coach_Name, Country, Experience_Years)
+VALUES 
+    ('Mahela Jayawardene', 'Sri Lanka', 10),
+    ('Stephen Fleming', 'New Zealand', 12),
+    ('Andy Flower', 'Zimbabwe', 15),
+    ('Chandrakant Pandit', 'India', 10),
+    ('Ricky Ponting', 'Australia', 14),
+    ('Kumar Sangakkara', 'Sri Lanka', 9),
+    ('Daniel Vettori', 'New Zealand', 11),
+    ('Trevor Bayliss', 'Australia', 13),
+    ('Andy Bichel', 'Australia', 8),
+    ('Ashish Nehra', 'India', 7),
+    ('Ravi Shastri', 'India', 4),
+    ('Gary Kirsten', 'South Africa', 12),
+    ('Tom Moody', 'Australia', 13),
+    ('Brendon McCullum', 'New Zealand', 6),
+    ('Justin Langer', 'Australia', 10),
+    ('Anil Kumble', 'India', 9),
+    ('Rahul Dravid', 'India', 8),
+    ('Mickey Arthur', 'South Africa', 14),
+    ('Mike Hesson', 'New Zealand', 11),
+    ('Eoin Morgan', 'England', 3),
+    ('Lance Klusener', 'South Africa', 7);
+
+
+-- =============================================
+-- Registers Table Data
+-- =============================================
+INSERT INTO Registers (Team_Name, Year, Coach_Name)
+VALUES 
+    ('Mumbai Indians', 2025, 'Mahela Jayawardene'),
+    ('Chennai Super Kings', 2025, 'Stephen Fleming'),
+    ('Royal Challengers Bangalore', 2025, 'Andy Flower'),
+    ('Kolkata Knight Riders', 2025, 'Chandrakant Pandit'),
+    ('Delhi Capitals', 2025, 'Ricky Ponting'),
+    ('Rajasthan Royals', 2025, 'Kumar Sangakkara'),
+    ('Sunrisers Hyderabad', 2025, 'Daniel Vettori'),
+    ('Punjab Kings', 2025, 'Trevor Bayliss'),
+    ('Lucknow Super Giants', 2025, 'Andy Bichel'),
+    ('Gujarat Titans', 2025, 'Ashish Nehra');
+
+
+-- =============================================
+-- Stadium Table Data
+-- =============================================
+INSERT INTO Stadium (Stadium_Name, Capacity, City)
+VALUES 
+    ('Wankhede Stadium', 33000, 'Mumbai'),
+    ('M. A. Chidambaram Stadium', 50000, 'Chennai'),
+    ('M. Chinnaswamy Stadium', 40000, 'Bengaluru'),
+    ('Eden Gardens', 66000, 'Kolkata'),
+    ('Arun Jaitley Stadium', 41000, 'Delhi'),
+    ('Sawai Mansingh Stadium', 30000, 'Jaipur'),
+    ('Rajiv Gandhi International Stadium', 55000, 'Hyderabad'),
+    ('Punjab Cricket Association Stadium', 27000, 'Mohali'),
+    ('BRSABV Ekana Cricket Stadium', 50000, 'Lucknow'),
+    ('Narendra Modi Stadium', 132000, 'Ahmedabad'),
+    ('ACA Stadium', 40000, 'Guwahati'),
+    ('Holkar Stadium', 30000, 'Indore'),
+    ('ACA-VDCA Stadium', 27000, 'Visakhapatnam'),
+    ('HPCA Stadium', 23000, 'Dharamshala'),
+    ('Greenfield International Stadium', 50000, 'Thiruvananthapuram'),
+    ('Barsapara Cricket Stadium', 40000, 'Guwahati'),
+    ('Dr. DY Patil Stadium', 55000, 'Navi Mumbai'),
+    ('Shaheed Veer Narayan Singh Stadium', 65000, 'Raipur'),
+    ('Nehru Stadium', 25000, 'Kochi'),
+    ('Barabati Stadium', 45000, 'Cuttack');
+
+
+-- =============================================
+-- Home_Ground Table Data
+-- =============================================
+INSERT INTO Home_Ground (Stadium_Name, Team_Name, Year)
+VALUES 
+    ('Wankhede Stadium', 'Mumbai Indians', 2025),
+    ('M. A. Chidambaram Stadium', 'Chennai Super Kings', 2025),
+    ('M. Chinnaswamy Stadium', 'Royal Challengers Bangalore', 2025),
+    ('Eden Gardens', 'Kolkata Knight Riders', 2025),
+    ('Arun Jaitley Stadium', 'Delhi Capitals', 2025),
+    ('Sawai Mansingh Stadium', 'Rajasthan Royals', 2025),
+    ('Rajiv Gandhi International Stadium', 'Sunrisers Hyderabad', 2025),
+    ('Punjab Cricket Association Stadium', 'Punjab Kings', 2025),
+    ('BRSABV Ekana Cricket Stadium', 'Lucknow Super Giants', 2025),
+    ('Narendra Modi Stadium', 'Gujarat Titans', 2025),
+    ('ACA Stadium', 'Rajasthan Royals', 2025),
+    ('Holkar Stadium', 'Punjab Kings', 2025),
+    ('ACA-VDCA Stadium', 'Delhi Capitals', 2025);
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+    ('Rajat Patidar', 'India', TO_DATE('1993-06-01', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm off-break'),
+    ('Virat Kohli', 'India', TO_DATE('1988-11-05', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm medium'),
+    ('Yash Dayal', 'India', TO_DATE('1997-12-13', 'YYYY-MM-DD'), 'Left-handed', 'Left-arm medium-fast'),
+    ('Devdutt Padikkal', 'India', TO_DATE('2000-07-07', 'YYYY-MM-DD'), 'Left-handed', 'Right-arm off-break'),
+    ('Swastik Chikara', 'India', TO_DATE('2005-04-03', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm off-break'),
+    ('Phil Salt', 'England', TO_DATE('1996-08-28', 'YYYY-MM-DD'), 'Right-handed', 'N/A'),
+    ('Jitesh Sharma', 'India', TO_DATE('1993-10-22', 'YYYY-MM-DD'), 'Right-handed', 'N/A'),
+    ('Liam Livingstone', 'England', TO_DATE('1993-08-04', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm off-break'),
+    ('Krunal Pandya', 'India', TO_DATE('1991-03-24', 'YYYY-MM-DD'), 'Left-handed', 'Left-arm orthodox'),
+    ('Tim David', 'Singapore', TO_DATE('1996-03-16', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm off-break'),
+    ('Jacob Bethell', 'England', TO_DATE('2003-10-23', 'YYYY-MM-DD'), 'Left-handed', 'Left-arm orthodox'),
+    ('Romario Shepherd', 'West Indies', TO_DATE('1994-11-26', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm fast-medium'),
+    ('Swapnil Singh', 'India', TO_DATE('1991-01-22', 'YYYY-MM-DD'), 'Right-handed', 'Left-arm orthodox'),
+    ('Manoj Bhandage', 'India', TO_DATE('1998-10-05', 'YYYY-MM-DD'), 'Left-handed', 'Right-arm medium-fast'),
+    ('Mohit Rathee', 'India', TO_DATE('1999-01-13', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm leg-break'),
+    ('Josh Hazlewood', 'Australia', TO_DATE('1991-01-08', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm fast-medium'),
+    ('Bhuvneshwar Kumar', 'India', TO_DATE('1990-02-05', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm medium'),
+    ('Rasikh Salam', 'India', TO_DATE('2000-04-05', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm medium'),
+    ('Nuwan Thushara', 'Sri Lanka', TO_DATE('1994-08-06', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm fast-medium'),
+    ('Lungi Ngidi', 'South Africa', TO_DATE('1996-03-29', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm fast-medium'),
+    ('Abhinandan Singh', 'India', TO_DATE('1997-03-30', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm fast-medium'),
+    ('Suyash Sharma', 'India', TO_DATE('2003-05-15', 'YYYY-MM-DD'), 'Right-handed', 'Right-arm leg-break');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Royal Challengers Bengaluru)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role) VALUES
+('Virat Kohli', 'Royal Challengers Bangalore', 2025, NULL, 210000000, 'Batter'),
+('Rajat Patidar', 'Royal Challengers Bangalore', 2025, NULL, 110000000, 'Batter'),
+('Yash Dayal', 'Royal Challengers Bangalore', 2025, NULL, 50000000, 'Bowler'),
+('Liam Livingstone', 'Royal Challengers Bangalore', 2025, 20000000, 87500000, 'All-rounder'),
+('Phil Salt', 'Royal Challengers Bangalore', 2025, 20000000, 115000000, 'Wicketkeeper'),
+('Jitesh Sharma', 'Royal Challengers Bangalore', 2025, 10000000, 110000000, 'Wicketkeeper'),
+('Josh Hazlewood', 'Royal Challengers Bangalore', 2025, 20000000, 125000000, 'Bowler'),
+('Rasikh Salam', 'Royal Challengers Bangalore', 2025, 3000000, 60000000, 'Bowler'),
+('Suyash Sharma', 'Royal Challengers Bangalore', 2025, 3000000, 26000000, 'Bowler'),
+('Krunal Pandya', 'Royal Challengers Bangalore', 2025, 20000000, 57500000, 'All-rounder'),
+('Bhuvneshwar Kumar', 'Royal Challengers Bangalore', 2025, 20000000, 107500000, 'Bowler'),
+('Swapnil Singh', 'Royal Challengers Bangalore', 2025, 3000000, 5000000, 'All-rounder'),
+('Tim David', 'Royal Challengers Bangalore', 2025, 20000000, 30000000, 'All-rounder'),
+('Romario Shepherd', 'Royal Challengers Bangalore', 2025, 15000000, 15000000, 'All-rounder'),
+('Jacob Bethell', 'Royal Challengers Bangalore', 2025, 12500000, 26000000, 'All-rounder'),
+('Nuwan Thushara', 'Royal Challengers Bangalore', 2025, 7500000, 16000000, 'Bowler'),
+('Devdutt Padikkal', 'Royal Challengers Bangalore', 2025, 20000000, 20000000, 'Batter'),
+('Swastik Chikara', 'Royal Challengers Bangalore', 2025, 2000000, 2000000, 'Batter'),
+('Manoj Bhandage', 'Royal Challengers Bangalore', 2025, 2000000, 2000000, 'All-rounder'),
+('Mohit Rathee', 'Royal Challengers Bangalore', 2025, 2000000, 2000000, 'All-rounder'),
+('Lungi Ngidi', 'Royal Challengers Bangalore', 2025, 20000000, 20000000, 'Bowler'),
+('Abhinandan Singh', 'Royal Challengers Bangalore', 2025, 2000000, 2000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('MS Dhoni', 'India', DATE '1981-07-07', 'Right-handed', 'Right-arm medium'),
+('Ruturaj Gaikwad', 'India', DATE '1997-01-31', 'Right-handed', 'Right-arm off break'),
+('Shaik Rasheed', 'India', DATE '2004-09-24', 'Right-handed', 'Right-arm leg spin'),
+('Andre Siddarth', 'India', DATE '2006-08-28', 'Right-handed', NULL),
+('Devon Conway', 'New Zealand', DATE '1991-07-08', 'Left-handed', 'Right-arm medium'),
+('Vansh Bedi', 'India', DATE '2002-12-23', 'Right-handed', NULL),
+('Ravichandran Ashwin', 'India', DATE '1986-09-17', 'Right-handed', 'Right-arm off break'),
+('Ravindra Jadeja', 'India', DATE '1988-12-06', 'Left-handed', 'Left-arm orthodox'),
+('Vijay Shankar', 'India', DATE '1991-01-26', 'Right-handed', 'Right-arm medium'),
+('Shivam Dube', 'India', DATE '1993-06-26', 'Left-handed', 'Right-arm medium'),
+('Deepak Hooda', 'India', DATE '1995-04-19', 'Right-handed', 'Right-arm off break'),
+('Ramakrishna Ghosh', 'India', DATE '1997-08-28', 'Right-handed', 'Right-arm fast-medium'),
+('Sam Curran', 'England', DATE '1998-06-03', 'Left-handed', 'Left-arm fast-medium'),
+('Rachin Ravindra', 'New Zealand', DATE '1999-11-18', 'Left-handed', 'Left-arm orthodox'),
+('Anshul Kamboj', 'India', DATE '2000-12-06', 'Right-handed', 'Right-arm fast-medium'),
+('Shreyas Gopal', 'India', DATE '1993-09-04', 'Right-handed', 'Right-arm leg spin'),
+('Noor Ahmad', 'Afghanistan', DATE '2005-01-03', 'Right-handed', 'Left-arm wrist-spin'),
+('Jamie Overton', 'England', DATE '1994-04-10', 'Right-handed', 'Right-arm fast'),
+('Nathan Ellis', 'Australia', DATE '1994-09-22', 'Right-handed', 'Right-arm fast-medium'),
+('Mukesh Choudhary', 'India', DATE '1996-07-06', 'Left-handed', 'Left-arm fast-medium'),
+('Khaleel Ahmed', 'India', DATE '1997-12-05', 'Right-handed', 'Left-arm fast-medium'),
+('Gurjapneet Singh', 'India', DATE '1998-11-08', 'Right-handed', 'Left-arm fast-medium'),
+('Kamlesh Nagarkoti', 'India', DATE '1999-12-28', 'Right-handed', 'Right-arm fast'),
+('Matheesha Pathirana', 'Sri Lanka', DATE '2002-12-18', 'Right-handed', 'Right-arm fast'),
+('Rahul Tripathi', 'India', DATE '1991-03-02', 'Right-handed', 'Right-arm medium');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Chennai Super Kings)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('MS Dhoni', 'Chennai Super Kings', 2025, NULL, 40000000, 'Wicketkeeper'),
+('Ruturaj Gaikwad', 'Chennai Super Kings', 2025, NULL, 210000000, 'Batter'),
+('Shaik Rasheed', 'Chennai Super Kings', 2025, NULL, 2000000, 'Batter'),
+('Andre Siddarth', 'Chennai Super Kings', 2025, 2000000, 2000000, 'Batter'),
+('Devon Conway', 'Chennai Super Kings', 2025, NULL, 100000000, 'Wicketkeeper'),
+('Vansh Bedi', 'Chennai Super Kings', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Ravichandran Ashwin', 'Chennai Super Kings', 2025, 20000000, 20000000, 'All-rounder'),
+('Ravindra Jadeja', 'Chennai Super Kings', 2025, NULL, 180000000, 'All-rounder'),
+('Vijay Shankar', 'Chennai Super Kings', 2025, 20000000, 20000000, 'All-rounder'),
+('Shivam Dube', 'Chennai Super Kings', 2025, NULL, 143000000, 'All-rounder'),
+('Deepak Hooda', 'Chennai Super Kings', 2025, 20000000, 20000000, 'All-rounder'),
+('Ramakrishna Ghosh', 'Chennai Super Kings', 2025, 3000000, 3000000, 'All-rounder'),
+('Sam Curran', 'Chennai Super Kings', 2025, 20000000, 24000000, 'All-rounder'),
+('Rachin Ravindra', 'Chennai Super Kings', 2025, NULL, 50000000, 'All-rounder'),
+('Anshul Kamboj', 'Chennai Super Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Shreyas Gopal', 'Chennai Super Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Noor Ahmad', 'Chennai Super Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Jamie Overton', 'Chennai Super Kings', 2025, 20000000, 15000000, 'Bowler'),
+('Nathan Ellis', 'Chennai Super Kings', 2025, 20000000, 20000000, 'Bowler'),
+('Mukesh Choudhary', 'Chennai Super Kings', 2025, NULL, 2000000, 'Bowler'),
+('Khaleel Ahmed', 'Chennai Super Kings', 2025, 20000000, 20000000, 'Bowler'),
+('Gurjapneet Singh', 'Chennai Super Kings', 2025, 2000000, 22000000, 'Bowler'),
+('Kamlesh Nagarkoti', 'Chennai Super Kings', 2025, NULL, 2000000, 'Bowler'),
+('Matheesha Pathirana', 'Chennai Super Kings', 2025, NULL, 5000000, 'Bowler'),
+('Rahul Tripathi', 'Chennai Super Kings', 2025, 2000000, 2000000, 'Batter');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Sanju Samson', 'India', DATE '1994-11-11', 'Right-handed', 'N/A'),
+('Jofra Archer', 'England', DATE '1995-04-09', 'Right-handed', 'Right-arm fast'),
+('Yudhvir Charak', 'India', DATE '1998-08-15', 'Left-handed', 'Left-arm medium'),
+('Tushar Deshpande', 'India', DATE '1995-05-15', 'Right-handed', 'Right-arm medium-fast'),
+('Shubham Dubey', 'India', DATE '2000-02-20', 'Left-handed', 'Left-arm orthodox'),
+('Fazalhaq Farooqi', 'Afghanistan', DATE '2000-03-01', 'Right-handed', 'Left-arm fast'),
+('Wanindu Hasaranga', 'Sri Lanka', DATE '1997-08-29', 'Right-handed', 'Right-arm leg spin'),
+('Shimron Hetmyer', 'West Indies', DATE '1996-12-26', 'Left-handed', 'Right-arm medium'),
+('Yashasvi Jaiswal', 'India', DATE '2002-12-28', 'Left-handed', 'Right-arm medium'),
+('Dhruv Jurel', 'India', DATE '1999-10-15', 'Right-handed', 'N/A'),
+('Kumar Kartikeya', 'India', DATE '1997-12-01', 'Left-handed', 'Left-arm orthodox'),
+('Akash Madhwal', 'India', DATE '1994-11-25', 'Right-handed', 'Right-arm medium-fast'),
+('Kwena Maphaka', 'South Africa', DATE '1998-07-10', 'Right-handed', 'Right-arm fast'),
+('Riyan Parag', 'India', DATE '2001-11-10', 'Right-handed', 'Right-arm leg spin'),
+('Nitish Rana', 'India', DATE '1994-12-27', 'Left-handed', 'N/A'),
+('Kunal Rathore', 'India', DATE '1999-09-10', 'Right-handed', 'N/A'),
+('Ashok Sharma', 'India', DATE '2000-05-05', 'Left-handed', 'Left-arm orthodox'),
+('Sandeep Sharma', 'India', DATE '1993-05-19', 'Right-handed', 'Right-arm fast-medium'),
+('Vaibhav Suryavanshi', 'India', DATE '2011-10-10', 'Right-handed', 'N/A'),
+('Maheesh Theekshana', 'Sri Lanka', DATE '1996-08-01', 'Right-handed', 'Right-arm off break');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Rajasthan Royals)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Sanju Samson', 'Rajasthan Royals', 2025, NULL, 80000000, 'Wicketkeeper'),
+('Jofra Archer', 'Rajasthan Royals', 2025, 10000000, 120000000, 'Bowler'),
+('Yudhvir Charak', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Tushar Deshpande', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Shubham Dubey', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Batter'),
+('Fazalhaq Farooqi', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Wanindu Hasaranga', 'Rajasthan Royals', 2025, 5000000, 5000000, 'All-rounder'),
+('Shimron Hetmyer', 'Rajasthan Royals', 2025, NULL, 85000000, 'Batter'),
+('Yashasvi Jaiswal', 'Rajasthan Royals', 2025, NULL, 70000000, 'Batter'),
+('Dhruv Jurel', 'Rajasthan Royals', 2025, NULL, 2000000, 'Wicketkeeper'),
+('Kumar Kartikeya', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Akash Madhwal', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Kwena Maphaka', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Riyan Parag', 'Rajasthan Royals', 2025, NULL, 30000000, 'All-rounder'),
+('Nitish Rana', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Batter'),
+('Kunal Rathore', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Ashok Sharma', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler'),
+('Sandeep Sharma', 'Rajasthan Royals', 2025, NULL, 5000000, 'Bowler'),
+('Vaibhav Suryavanshi', 'Rajasthan Royals', 2025, 2000000, 10000000, 'Batter'),
+('Maheesh Theekshana', 'Rajasthan Royals', 2025, 2000000, 2000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Harry Brook', 'England', DATE '1999-02-22', 'Right-handed', 'Right-arm medium'),
+('Dushmantha Chameera', 'Sri Lanka', DATE '1992-01-11', 'Right-handed', 'Right-arm fast'),
+('Faf du Plessis', 'South Africa', DATE '1984-07-13', 'Right-handed', 'Right-arm leg break'),
+('Donovan Ferreira', 'South Africa', DATE '1998-07-21', 'Right-handed', 'Right-arm off break'),
+('Jake Fraser-McGurk', 'Australia', DATE '2002-04-11', 'Right-handed', 'Right-arm leg break'),
+('Mukesh Kumar', 'India', DATE '1993-10-12', 'Right-handed', 'Right-arm medium'),
+('Manvanth Kumar', 'India', DATE '2000-03-15', 'Right-handed', 'Right-arm off break'),
+('Ajay Mandal', 'India', DATE '1996-02-25', 'Left-handed', 'Left-arm orthodox'),
+('Karun Nair', 'India', DATE '1991-12-06', 'Right-handed', 'Right-arm off break'),
+('Darshan Nalkande', 'India', DATE '1998-10-04', 'Right-handed', 'Right-arm medium-fast'),
+('Thangarasu Natarajan', 'India', DATE '1991-05-27', 'Left-handed', 'Left-arm fast-medium'),
+('Vipraj Nigam', 'India', DATE '1999-09-09', 'Right-handed', 'Right-arm medium'),
+('Axar Patel', 'India', DATE '1994-01-20', 'Left-handed', 'Left-arm orthodox'),
+('Abhishek Porel', 'India', DATE '2002-10-17', 'Left-handed', 'N/A'),
+('KL Rahul', 'India', DATE '1992-04-18', 'Right-handed', 'N/A'),
+('Sameer Rizvi', 'India', DATE '2003-12-06', 'Right-handed', 'Right-arm off break'),
+('Ashutosh Sharma', 'India', DATE '1998-09-15', 'Right-handed', 'Right-arm medium'),
+('Mohit Sharma', 'India', DATE '1988-09-18', 'Right-handed', 'Right-arm medium-fast'),
+('Mitchell Starc', 'Australia', DATE '1990-01-30', 'Left-handed', 'Left-arm fast'),
+('Madhav Tiwari', 'India', DATE '2001-06-22', 'Right-handed', 'Right-arm leg break'),
+('Tristan Stubbs', 'South Africa', DATE '2000-08-14', 'Right-handed', 'Right-arm off break'),
+('Tripurana Vijay', 'India', DATE '1997-11-11', 'Right-handed', 'Right-arm medium'),
+('Kuldeep Yadav', 'India', DATE '1994-12-14', 'Left-handed', 'Left-arm wrist spin');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Delhi Capitals)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Harry Brook', 'Delhi Capitals', 2025, 20000000, 59000000, 'Batter'),
+('Dushmantha Chameera', 'Delhi Capitals', 2025, 5000000, 5000000, 'Bowler'),
+('Faf du Plessis', 'Delhi Capitals', 2025, 20000000, 20000000, 'Batter'),
+('Donovan Ferreira', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Jake Fraser-McGurk', 'Delhi Capitals', 2025, 2000000, 164000000, 'Batter'),
+('Mukesh Kumar', 'Delhi Capitals', 2025, NULL, 2000000, 'Bowler'),
+('Manvanth Kumar', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Ajay Mandal', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Karun Nair', 'Delhi Capitals', 2025, 2000000, 2000000, 'Batter'),
+('Darshan Nalkande', 'Delhi Capitals', 2025, 2000000, 2000000, 'Bowler'),
+('Thangarasu Natarajan', 'Delhi Capitals', 2025, 2000000, 2000000, 'Bowler'),
+('Vipraj Nigam', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Axar Patel', 'Delhi Capitals', 2025, NULL, 90000000, 'All-rounder'),
+('Abhishek Porel', 'Delhi Capitals', 2025, NULL, 2000000, 'Wicketkeeper'),
+('KL Rahul', 'Delhi Capitals', 2025, 20000000, 20000000, 'Wicketkeeper'),
+('Sameer Rizvi', 'Delhi Capitals', 2025, 2000000, 2000000, 'Batter'),
+('Ashutosh Sharma', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Mohit Sharma', 'Delhi Capitals', 2025, 2000000, 2000000, 'Bowler'),
+('Mitchell Starc', 'Delhi Capitals', 2025, 20000000, 117500000, 'Bowler'),
+('Madhav Tiwari', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Tristan Stubbs', 'Delhi Capitals', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Tripurana Vijay', 'Delhi Capitals', 2025, 2000000, 2000000, 'All-rounder'),
+('Kuldeep Yadav', 'Delhi Capitals', 2025, NULL, 60000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Rohit Sharma', 'India', DATE '1987-04-30', 'Right-handed', 'Right-arm offbreak'),
+('Suryakumar Yadav', 'India', DATE '1990-09-14', 'Right-handed', 'Right-arm medium'),
+('Hardik Pandya', 'India', DATE '1993-10-11', 'Right-handed', 'Right-arm medium-fast'),
+('Tilak Varma', 'India', DATE '2002-11-08', 'Left-handed', 'Right-arm offbreak'),
+('Jasprit Bumrah', 'India', DATE '1993-12-06', 'Right-handed', 'Right-arm fast'),
+('Trent Boult', 'New Zealand', DATE '1989-07-22', 'Right-handed', 'Left-arm fast-medium'),
+('Deepak Chahar', 'India', DATE '1992-08-07', 'Right-handed', 'Right-arm medium'),
+('Will Jacks', 'England', DATE '1998-11-21', 'Right-handed', 'Right-arm offbreak'),
+('Naman Dhir', 'India', DATE '1999-12-31', 'Right-handed', 'Right-arm offbreak'),
+('Mitchell Santner', 'New Zealand', DATE '1992-02-05', 'Left-handed', 'Slow left-arm orthodox'),
+('Ryan Rickelton', 'South Africa', DATE '1996-07-11', 'Left-handed', 'N/A'),
+('Reece Topley', 'England', DATE '1994-02-21', 'Right-handed', 'Left-arm fast-medium'),
+('Lizaad Williams', 'South Africa', DATE '1993-10-01', 'Left-handed', 'Right-arm medium-fast'),
+('Robin Minz', 'India', DATE '2001-09-20', 'Left-handed', 'Slow left-arm orthodox'),
+('Karn Sharma', 'India', DATE '1987-10-23', 'Left-handed', 'Legbreak googly'),
+('Vignesh Puthur', 'India', DATE '2000-06-15', 'Right-handed', 'Left-arm wrist spin'),
+('Bevon Jacobs', 'India', DATE '2002-03-10', 'Right-handed', 'Right-arm medium'),
+('Satyanarayana Raju', 'India', DATE '1999-05-25', 'Right-handed', 'Right-arm medium-fast'),
+('Raj Bawa', 'India', DATE '2002-11-12', 'Left-handed', 'Right-arm medium-fast'),
+('Ashwani Kumar', 'India', DATE '2001-01-18', 'Left-handed', 'Left-arm medium'),
+('Arjun Tendulkar', 'India', DATE '1999-09-24', 'Left-handed', 'Left-arm medium-fast'),
+('Krishnan Shrijith', 'India', DATE '1996-12-01', 'Left-handed', 'Right-arm offbreak'),
+('Mujeeb Ur Rahman', 'Afghanistan', DATE '2001-03-28', 'Right-handed', 'Right-arm offbreak');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Mumbai Indians)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Rohit Sharma', 'Mumbai Indians', 2025, NULL, 163000000, 'Batter'),
+('Suryakumar Yadav', 'Mumbai Indians', 2025, NULL, 163500000, 'Batter'),
+('Hardik Pandya', 'Mumbai Indians', 2025, NULL, 163500000, 'All-rounder'),
+('Tilak Varma', 'Mumbai Indians', 2025, NULL, 180000000, 'Batter'),
+('Jasprit Bumrah', 'Mumbai Indians', 2025, NULL, 180000000, 'Bowler'),
+('Trent Boult', 'Mumbai Indians', 2025, 24000000, 149000000, 'Bowler'),
+('Deepak Chahar', 'Mumbai Indians', 2025, 20000000, 20000000, 'Bowler'),
+('Will Jacks', 'Mumbai Indians', 2025, 2000000, 2000000, 'All-rounder'),
+('Naman Dhir', 'Mumbai Indians', 2025, 2000000, 2000000, 'All-rounder'),
+('Mitchell Santner', 'Mumbai Indians', 2025, 2000000, 2000000, 'All-rounder'),
+('Ryan Rickelton', 'Mumbai Indians', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Reece Topley', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Lizaad Williams', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Robin Minz', 'Mumbai Indians', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Karn Sharma', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Vignesh Puthur', 'Mumbai Indians', 2025, 2000000, 2000000, 'All-rounder'),
+('Bevon Jacobs', 'Mumbai Indians', 2025, 2000000, 2000000, 'Batter'),
+('Satyanarayana Raju', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Raj Bawa', 'Mumbai Indians', 2025, 2000000, 2000000, 'All-rounder'),
+('Ashwani Kumar', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Arjun Tendulkar', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler'),
+('Krishnan Shrijith', 'Mumbai Indians', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Mujeeb Ur Rahman', 'Mumbai Indians', 2025, 2000000, 2000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Rishabh Pant', 'India', DATE '1997-10-04', 'Left-handed', NULL),
+('David Miller', 'South Africa', DATE '1989-06-10', 'Left-handed', 'Right-arm off break'),
+('Aiden Markram', 'South Africa', DATE '1994-10-04', 'Right-handed', 'Right-arm off break'),
+('Himmat Singh', 'India', DATE '1996-11-08', 'Right-handed', 'Right-arm off break'),
+('Ayush Badoni', 'India', DATE '1999-12-03', 'Right-handed', 'Right-arm off break'),
+('Matthew Breetzke', 'South Africa', DATE '1998-11-03', 'Right-handed', 'Right-arm medium'),
+('Nicholas Pooran', 'West Indies', DATE '1995-10-02', 'Left-handed', NULL),
+('Aryan Juyal', 'India', DATE '2001-11-11', 'Right-handed', NULL),
+('Mitchell Marsh', 'Australia', DATE '1991-10-20', 'Right-handed', 'Right-arm medium-fast'),
+('Shahbaz Ahmed', 'India', DATE '1994-12-11', 'Left-handed', 'Left-arm orthodox'),
+('Yuvraj Chaudhary', 'India', DATE '2001-10-06', 'Left-handed', 'Left-arm orthodox'),
+('Abdul Samad', 'India', DATE '2001-10-28', 'Right-handed', 'Right-arm leg break'),
+('Rajvardhan Hangargekar', 'India', DATE '2002-11-10', 'Right-handed', 'Right-arm medium-fast'),
+('Arshin Kulkarni', 'India', DATE '2005-02-15', 'Right-handed', 'Right-arm medium-fast'),
+('Avesh Khan', 'India', DATE '1996-12-13', 'Right-handed', 'Right-arm medium-fast'),
+('Akash Deep', 'India', DATE '1996-12-15', 'Right-handed', 'Right-arm medium-fast'),
+('Mohsin Khan', 'India', DATE '1998-07-15', 'Left-handed', 'Left-arm medium-fast'),
+('Shamar Joseph', 'West Indies', DATE '1999-08-31', 'Left-handed', 'Right-arm medium-fast'),
+('Akash Singh', 'India', DATE '2002-04-26', 'Right-handed', 'Left-arm medium-fast'),
+('Mayank Yadav', 'India', DATE '2002-06-17', 'Right-handed', 'Right-arm medium-fast'),
+('Manimaran Siddharth', 'India', DATE '1998-07-03', 'Right-handed', 'Left-arm orthodox'),
+('Digvesh Singh', 'India', DATE '1999-12-15', 'Right-handed', 'Right-arm leg break'),
+('Ravi Bishnoi', 'India', DATE '2000-09-05', 'Right-handed', 'Right-arm leg break'),
+('Shardul Thakur', 'India', DATE '1991-10-16', 'Right-handed', 'Right-arm medium'),
+('Prince Yadav', 'India', DATE '2001-12-12', 'Right-handed', 'Right-arm medium-fast');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Lucknow Super Giants)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Rishabh Pant', 'Lucknow Super Giants', 2025, 20000000, 270000000, 'Wicketkeeper'),
+('David Miller', 'Lucknow Super Giants', 2025, 20000000, 75000000, 'Batter'),
+('Aiden Markram', 'Lucknow Super Giants', 2025, 20000000, 20000000, 'Batter'),
+('Himmat Singh', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'Batter'),
+('Ayush Badoni', 'Lucknow Super Giants', 2025, NULL, 40000000, 'All-rounder'),
+('Matthew Breetzke', 'Lucknow Super Giants', 2025, 2000000, 7500000, 'Wicketkeeper'),
+('Nicholas Pooran', 'Lucknow Super Giants', 2025, NULL, 210000000, 'Wicketkeeper'),
+('Aryan Juyal', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'Wicketkeeper'),
+('Mitchell Marsh', 'Lucknow Super Giants', 2025, 20000000, 34000000, 'All-rounder'),
+('Shahbaz Ahmed', 'Lucknow Super Giants', 2025, 2000000, 24000000, 'All-rounder'),
+('Yuvraj Chaudhary', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'All-rounder'),
+('Abdul Samad', 'Lucknow Super Giants', 2025, 2000000, 42000000, 'All-rounder'),
+('Rajvardhan Hangargekar', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'Bowler'),
+('Arshin Kulkarni', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'All-rounder'),
+('Avesh Khan', 'Lucknow Super Giants', 2025, 20000000, 97500000, 'Bowler'),
+('Akash Deep', 'Lucknow Super Giants', 2025, 2000000, 80000000, 'Bowler'),
+('Mohsin Khan', 'Lucknow Super Giants', 2025, NULL, 40000000, 'Bowler'),
+('Shamar Joseph', 'Lucknow Super Giants', 2025, 2000000, 7500000, 'Bowler'),
+('Akash Singh', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'Bowler'),
+('Mayank Yadav', 'Lucknow Super Giants', 2025, NULL, 110000000, 'Bowler'),
+('Manimaran Siddharth', 'Lucknow Super Giants', 2025, 2000000, 7500000, 'Bowler'),
+('Digvesh Singh', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'Bowler'),
+('Ravi Bishnoi', 'Lucknow Super Giants', 2025, NULL, 110000000, 'Bowler'),
+('Shardul Thakur', 'Lucknow Super Giants', 2025, 20000000, 20000000, 'Bowler'),
+('Prince Yadav', 'Lucknow Super Giants', 2025, 2000000, 3000000, 'All-rounder');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Shubman Gill', 'India', DATE '1999-09-08', 'Right-handed', NULL),
+('Gurnoor Brar', 'India', DATE '2000-05-25', 'Left-handed', 'Right-arm medium-fast'),
+('Jos Buttler', 'England', DATE '1990-09-08', 'Right-handed', NULL),
+('Gerald Coetzee', 'South Africa', DATE '2000-10-02', 'Right-handed', 'Right-arm fast'),
+('Karim Janat', 'Afghanistan', DATE '1998-08-11', 'Right-handed', 'Right-arm medium-fast'),
+('Arshad Khan', 'India', DATE '1997-12-20', 'Left-handed', 'Left-arm medium-fast'),
+('Rashid Khan', 'Afghanistan', DATE '1998-09-20', 'Right-handed', 'Right-arm leg break'),
+('Shahrukh Khan', 'India', DATE '1995-05-27', 'Right-handed', 'Off break'),
+('Kulwant Khejroliya', 'India', DATE '1992-03-13', 'Right-handed', 'Left-arm medium-fast'),
+('Sai Kishore', 'India', DATE '1996-11-06', 'Left-handed', 'Left-arm orthodox'),
+('Prasidh Krishna', 'India', DATE '1996-02-19', 'Right-handed', 'Right-arm fast'),
+('Kumar Kushagra', 'India', DATE '2004-10-23', 'Right-handed', NULL),
+('Mahipal Lomror', 'India', DATE '1999-11-16', 'Left-handed', 'Slow left-arm orthodox'),
+('Glenn Phillips', 'New Zealand', DATE '1996-12-06', 'Right-handed', 'Right-arm off break'),
+('Kagiso Rabada', 'South Africa', DATE '1995-05-25', 'Left-handed', 'Right-arm fast'),
+('Anuj Rawat', 'India', DATE '1999-10-17', 'Left-handed', NULL),
+('Sherfane Rutherford', 'West Indies', DATE '1998-08-15', 'Left-handed', 'Right-arm fast-medium'),
+('Ishant Sharma', 'India', DATE '1988-09-02', 'Right-handed', 'Right-arm fast-medium'),
+('Nishant Sindhu', 'India', DATE '2004-04-09', 'Left-handed', 'Left-arm orthodox'),
+('Mohammed Siraj', 'India', DATE '1994-03-13', 'Right-handed', 'Right-arm fast'),
+('Sai Sudharsan', 'India', DATE '2001-10-15', 'Left-handed', NULL),
+('Washington Sundar', 'India', DATE '1999-10-05', 'Left-handed', 'Right-arm off break'),
+('Manav Suthar', 'India', DATE '2002-08-03', 'Left-handed', 'Left-arm orthodox'),
+('Rahul Tewatia', 'India', DATE '1993-05-20', 'Left-handed', 'Leg break'),
+('Jayant Yadav', 'India', DATE '1990-01-22', 'Right-handed', 'Right-arm off break');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Gujarat Titans)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Shubman Gill', 'Gujarat Titans', 2025, NULL, 120000000, 'Batter'),
+('Gurnoor Brar', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler'),
+('Jos Buttler', 'Gujarat Titans', 2025, 20000000, 157500000, 'Batter'),
+('Gerald Coetzee', 'Gujarat Titans', 2025, 2000000, 7500000, 'Bowler'),
+('Karim Janat', 'Gujarat Titans', 2025, 2000000, 3000000, 'All-rounder'),
+('Arshad Khan', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler'),
+('Rashid Khan', 'Gujarat Titans', 2025, NULL, 150000000, 'Bowler'),
+('Shahrukh Khan', 'Gujarat Titans', 2025, 2000000, 42000000, 'All-rounder'),
+('Kulwant Khejroliya', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler'),
+('Sai Kishore', 'Gujarat Titans', 2025, NULL, 40000000, 'Bowler'),
+('Prasidh Krishna', 'Gujarat Titans', 2025, 2000000, 7500000, 'Bowler'),
+('Kumar Kushagra', 'Gujarat Titans', 2025, 2000000, 3000000, 'Wicketkeeper'),
+('Mahipal Lomror', 'Gujarat Titans', 2025, 2000000, 3000000, 'All-rounder'),
+('Glenn Phillips', 'Gujarat Titans', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Kagiso Rabada', 'Gujarat Titans', 2025, 20000000, 117500000, 'Bowler'),
+('Anuj Rawat', 'Gujarat Titans', 2025, 2000000, 3000000, 'Wicketkeeper'),
+('Sherfane Rutherford', 'Gujarat Titans', 2025, 2000000, 3000000, 'All-rounder'),
+('Ishant Sharma', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler'),
+('Nishant Sindhu', 'Gujarat Titans', 2025, 2000000, 3000000, 'All-rounder'),
+('Mohammed Siraj', 'Gujarat Titans', 2025, 20000000, 97500000, 'Bowler'),
+('Sai Sudharsan', 'Gujarat Titans', 2025, NULL, 110000000, 'Batter'),
+('Washington Sundar', 'Gujarat Titans', 2025, 2000000, 32000000, 'All-rounder'),
+('Manav Suthar', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler'),
+('Rahul Tewatia', 'Gujarat Titans', 2025, NULL, 40000000, 'All-rounder'),
+('Jayant Yadav', 'Gujarat Titans', 2025, 2000000, 3000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Shreyas Iyer', 'India', DATE '1994-12-06', 'Right-handed', 'Right-arm leg break'),
+('Pyla Avinash', 'India', DATE '2000-07-07', 'Right-handed', 'Right-arm medium-fast'),
+('Nehal Wadhera', 'India', DATE '2000-09-04', 'Left-handed', 'Right-arm leg break'),
+('Priyansh Arya', 'India', DATE '2001-01-18', 'Left-handed', 'Right-arm off break'),
+('Harnoor Singh', 'India', DATE '2003-01-30', 'Left-handed', 'Right-arm leg break'),
+('Musheer Khan', 'India', DATE '2005-02-27', 'Right-handed', 'Left-arm orthodox'),
+('Vishnu Vinod', 'India', DATE '1993-12-02', 'Right-handed', NULL),
+('Josh Inglis', 'Australia', DATE '1995-03-04', 'Right-handed', 'Right-arm off break'),
+('Prabhsimran Singh', 'India', DATE '2000-08-10', 'Right-handed', NULL),
+('Glenn Maxwell', 'Australia', DATE '1988-10-14', 'Right-handed', 'Right-arm off break'),
+('Marcus Stoinis', 'Australia', DATE '1989-08-16', 'Right-handed', 'Right-arm medium-fast'),
+('Shashank Singh', 'India', DATE '1991-11-21', 'Right-handed', 'Right-arm medium-fast'),
+('Aaron Hardie', 'Australia', DATE '1999-01-07', 'Right-handed', 'Right-arm medium-fast'),
+('Azmatullah Omarzai', 'Afghanistan', DATE '2000-03-24', 'Right-handed', 'Right-arm medium-fast'),
+('Marco Jansen', 'South Africa', DATE '2000-05-01', 'Right-handed', 'Left-arm medium-fast'),
+('Suryansh Shedge', 'India', DATE '2003-01-29', 'Right-handed', 'Right-arm medium-fast'),
+('Lockie Ferguson', 'New Zealand', DATE '1991-06-13', 'Right-handed', 'Right-arm medium-fast'),
+('Kuldeep Sen', 'India', DATE '1996-10-22', 'Right-handed', 'Right-arm medium-fast'),
+('Vijaykumar Vyshak', 'India', DATE '1997-01-31', 'Right-handed', 'Right-arm medium-fast'),
+('Yash Thakur', 'India', DATE '1998-12-28', 'Right-handed', 'Right-arm medium-fast'),
+('Xavier Bartlett', 'Australia', DATE '1998-12-17', 'Right-handed', 'Right-arm fast'),
+('Arshdeep Singh', 'India', DATE '1999-02-05', 'Left-handed', 'Left-arm medium-fast'),
+('Yuzvendra Chahal', 'India', DATE '1990-07-23', 'Right-handed', 'Right-arm leg break'),
+('Praveen Dubey', 'India', DATE '1993-07-01', 'Right-handed', 'Right-arm leg break'),
+('Harpreet Brar', 'India', DATE '1995-09-16', 'Left-handed', 'Left-arm orthodox');
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Punjab Kings)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Shreyas Iyer', 'Punjab Kings', 2025, 267500000, 267500000, 'Batter'),
+('Priyansh Arya', 'Punjab Kings', 2025, 2000000, 2000000, 'Batter'),
+('Pyla Avinash', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Xavier Bartlett', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Harpreet Brar', 'Punjab Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Yuzvendra Chahal', 'Punjab Kings', 2025, 18000000, 18000000, 'Bowler'),
+('Praveen Dubey', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Lockie Ferguson', 'Punjab Kings', 2025, 20000000, 20000000, 'Bowler'),
+('Aaron Hardie', 'Punjab Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Josh Inglis', 'Punjab Kings', 2025, 2600000, 2600000, 'Wicketkeeper'),
+('Marco Jansen', 'Punjab Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Musheer Khan', 'Punjab Kings', 2025, 2000000, 2000000, 'Batter'),
+('Glenn Maxwell', 'Punjab Kings', 2025, 42000000, 42000000, 'All-rounder'),
+('Azmatullah Omarzai', 'Punjab Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Kuldeep Sen', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Suryansh Shedge', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Arshdeep Singh', 'Punjab Kings', 2025, 18000000, 18000000, 'Bowler'),
+('Harnoor Singh', 'Punjab Kings', 2025, 2000000, 2000000, 'Batter'),
+('Prabhsimran Singh', 'Punjab Kings', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Shashank Singh', 'Punjab Kings', 2025, 2000000, 2000000, 'All-rounder'),
+('Marcus Stoinis', 'Punjab Kings', 2025, 11000000, 11000000, 'All-rounder'),
+('Yash Thakur', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler'),
+('Vishnu Vinod', 'Punjab Kings', 2025, 2000000, 2000000, 'Wicketkeeper'),
+('Nehal Wadhera', 'Punjab Kings', 2025, 2000000, 2000000, 'Batter'),
+('Vijaykumar Vyshak', 'Punjab Kings', 2025, 2000000, 2000000, 'Bowler');
+
+
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Pat Cummins', 'Australia', DATE '1993-05-08', 'Right-handed', 'Right-arm fast'),
+('Abhishek Sharma', 'India', DATE '2000-09-04', 'Left-handed', 'Left-arm orthodox'),
+('Nitish Kumar Reddy', 'India', DATE '2003-05-26', 'Right-handed', 'Right-arm medium'),
+('Travis Head', 'Australia', DATE '1993-12-19', 'Left-handed', NULL),
+('Heinrich Klaasen', 'South Africa', DATE '1991-07-30', 'Right-handed', NULL),
+('Ishan Kishan', 'India', DATE '1998-07-18', 'Left-handed', NULL),
+('Mohammed Shami', 'India', DATE '1990-09-03', 'Right-handed', 'Right-arm fast'),
+('Harshal Patel', 'India', DATE '1990-11-23', 'Right-handed', 'Right-arm medium-fast'),
+('Rahul Chahar', 'India', DATE '1999-08-10', 'Right-handed', 'Right-arm leg break'),
+('Adam Zampa', 'Australia', DATE '1991-03-31', 'Right-handed', 'Right-arm leg break'),
+('Atharva Taide', 'India', DATE '1998-11-15', 'Left-handed', NULL),
+('Abhinav Manohar', 'India', DATE '1994-11-16', 'Right-handed', NULL),
+('Simarjeet Singh', 'India', DATE '1997-10-10', 'Right-handed', 'Right-arm medium'),
+('Zeeshan Ansari', 'India', DATE '1998-12-15', 'Left-handed', 'Left-arm orthodox'),
+('Jaydev Unadkat', 'India', DATE '1991-10-18', 'Right-handed', 'Left-arm medium'),
+('Brydon Carse', 'England', DATE '1994-12-27', 'Right-handed', 'Right-arm fast'),
+('Kamindu Mendis', 'Sri Lanka', DATE '1996-02-15', 'Right-handed', 'Right-arm off break'),
+('Aniket Verma', 'India', DATE '1999-05-22', 'Right-handed', 'Left-arm orthodox'),
+('Eshan Malinga', 'India', DATE '1997-01-15', 'Right-handed', 'Right-arm fast'),
+('Sachin Baby', 'India', DATE '1990-11-18', 'Left-handed', NULL);
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Sunrisers Hyderabad)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+('Pat Cummins', 'Sunrisers Hyderabad', 2025, 20000000, 180000000, 'Captain, Bowler'),
+('Abhishek Sharma', 'Sunrisers Hyderabad', 2025, 14000000, 140000000, 'Batter, All-rounder'),
+('Ishan Kishan', 'Sunrisers Hyderabad', 2025, 2000000, 112500000, 'Batter, Wicketkeeper'),
+('Mohammed Shami', 'Sunrisers Hyderabad', 2025, 2000000, 100000000, 'Bowler'),
+('Harshal Patel', 'Sunrisers Hyderabad', 2025, 2000000, 80000000, 'Bowler, All-rounder'),
+('Rahul Chahar', 'Sunrisers Hyderabad', 2025, 1000000, 32000000, 'Bowler'),
+('Adam Zampa', 'Sunrisers Hyderabad', 2025, 1000000, 24000000, 'Bowler'),
+('Atharva Taide', 'Sunrisers Hyderabad', 2025, 300000, 3000000, 'Batter'),
+('Abhinav Manohar', 'Sunrisers Hyderabad', 2025, 3200000, 32000000, 'Batter'),
+('Simarjeet Singh', 'Sunrisers Hyderabad', 2025, 1500000, 15000000, 'Bowler'),
+('Zeeshan Ansari', 'Sunrisers Hyderabad', 2025, 400000, 4000000, 'Batter'),
+('Jaydev Unadkat', 'Sunrisers Hyderabad', 2025, 500000, 10000000, 'Bowler'),
+('Brydon Carse', 'Sunrisers Hyderabad', 2025, 500000, 10000000, 'Bowler'),
+('Kamindu Mendis', 'Sunrisers Hyderabad', 2025, 500000, 7500000, 'All-rounder'),
+('Aniket Verma', 'Sunrisers Hyderabad', 2025, 300000, 3000000, 'Bowler'),
+('Heinrich Klaasen', 'Sunrisers Hyderabad', 2025, 23000000, 230000000, 'Batter, Wicketkeeper'),
+('Travis Head', 'Sunrisers Hyderabad', 2025, 14000000, 140000000, 'Batter, All-rounder'),
+('Nitish Kumar Reddy', 'Sunrisers Hyderabad', 2025, 6000000, 60000000, 'All-rounder'),
+('Sachin Baby', 'Sunrisers Hyderabad', 2025, 300000, 3000000, 'Batter'),
+('Eshan Malinga', 'Sunrisers Hyderabad', 2025, 1200000, 12000000, 'Bowler');
+
+ 
+-- =============================================
+-- Player Table Data(2025)
+-- =============================================
+INSERT INTO Player (Player_Name, Nationality, Date_Of_Birth, Batting_Style, Bowling_Style)
+VALUES
+('Ajinkya Rahane', 'India', DATE '1988-06-06', 'Right-handed', 'Right-arm medium'),
+('Rinku Singh', 'India', DATE '1997-10-12', 'Left-handed', 'Right-arm off break'),
+('Angkrish Raghuvanshi', 'India', DATE '2004-06-05', 'Right-handed', 'Right-arm off break'),
+('Manish Pandey', 'India', DATE '1989-09-10', 'Right-handed', 'Right-arm medium'),
+('Rahmanullah Gurbaz', 'Afghanistan', DATE '2001-11-28', 'Right-handed', 'Right-arm medium-fast'),
+('Quinton de Kock', 'South Africa', DATE '1992-12-17', 'Left-handed', NULL),
+('Venkatesh Iyer', 'India', DATE '1994-12-25', 'Left-handed', 'Right-arm medium pace'),
+('Andre Russell', 'West Indies', DATE '1988-04-29', 'Right-handed', 'Right-arm fast-medium'),
+('Ramandeep Singh', 'India', DATE '1997-04-13', 'Right-handed', 'Right-arm medium'),
+('Anukul Roy', 'India', DATE '1998-11-30', 'Left-handed', 'Slow left-arm orthodox'),
+('Moeen Ali', 'England', DATE '1987-06-18', 'Left-handed', 'Right-arm off break'),
+('Rovman Powell', 'West Indies', DATE '1993-07-23', 'Right-handed', 'Right-arm medium'),
+('Anrich Nortje', 'South Africa', DATE '1993-11-16', 'Right-handed', 'Right-arm fast'),
+('Vaibhav Arora', 'India', DATE '1997-12-14', 'Right-handed', 'Right-arm fast medium'),
+('Harshit Rana', 'India', DATE '2001-12-22', 'Right-handed', 'Right-arm fast medium'),
+('Chetan Sakariya', 'India', DATE '1998-02-28', 'Left-handed', 'Left-arm fast'),
+('Spencer Johnson', 'Australia', DATE '1995-12-16', 'Left-handed', 'Left-arm fast'),
+('Mayank Markande', 'India', DATE '1997-11-11', 'Right-handed', 'Right-arm leg break'),
+('Varun Chakravarthy', 'India', DATE '1991-08-29', 'Right-handed', 'Right-arm leg break'),
+('Sunil Narine', 'West Indies', DATE '1988-05-26', 'Left-handed', 'Right-arm off break'),
+('Robin Uthappa', 'India', DATE '1985-11-11', 'Right-handed', NULL);
+
+
+-- =============================================
+-- PlayedIn Table Data(2025)(Kolkata Knight Riders)
+-- =============================================
+INSERT INTO PlayedIn (Player_Name, Team_Name, Year, Base_Price, Final_Price, Role)
+VALUES
+  ('Shreyas Iyer', 'Kolkata Knight Riders', 2025, NULL, 250000000, 'Captain, Batter'),
+  ('Sunil Narine', 'Kolkata Knight Riders', 2025, NULL, 200000000, 'All-rounder'),
+  ('Robin Uthappa', 'Kolkata Knight Riders', 2025, 2000000, 20000000, 'Batter'),
+  ('Rinku Singh', 'Kolkata Knight Riders', 2025, 2000000, 20000000, 'Batter'),
+  ('Manish Pandey', 'Kolkata Knight Riders', 2025, 2000000, 15000000, 'Batter'),
+  ('Andre Russell', 'Kolkata Knight Riders', 2025, NULL, 300000000, 'All-rounder'),
+  ('Anrich Nortje', 'Kolkata Knight Riders', 2025, 2000000, 25000000, 'Bowler'),
+  ('Quinton de Kock', 'Kolkata Knight Riders', 2025, NULL, 220000000, 'Wicketkeeper, Batter'),
+  ('Rahul Tewatia', 'Kolkata Knight Riders', 2025, 2000000, 18000000, 'All-rounder'),
+  ('Chetan Sakariya', 'Kolkata Knight Riders', 2025, 2000000, 20000000, 'Bowler'),
+  ('Mayank Markande', 'Kolkata Knight Riders', 2025, 2000000, 15000000, 'Bowler'),
+  ('Spencer Johnson', 'Kolkata Knight Riders', 2025, 2000000, 15000000, 'Bowler'),
+  ('Harshit Rana', 'Kolkata Knight Riders', 2025, 2000000, 18000000, 'Bowler'),
+  ('Rovman Powell', 'Kolkata Knight Riders', 2025, 2000000, 20000000, 'All-rounder')
+  ('Moeen Ali', 'Kolkata Knight Riders', 2025, 2000000, 20000000, 'All-rounder'),
+  ('Rahul Tripathi', 'Kolkata Knight Riders', 2025, 2000000, 18000000, 'Batter');
+
+
+-- =============================================
+-- Match-1 Table Data (Kolkata Knight Riders Vs Royal Challengers Bangalore)
+-- =============================================
+INSERT INTO Match (Match_Timestamp, Type, Stadium_Name, Man_Of_The_Match)
+VALUES ('2025-03-22 19:30:00', 'League', 'Eden Gardens', 'Krunal Pandya');
+
+
+-- =============================================
+-- Played_By Table Data for Match-1
+-- =============================================
+INSERT INTO Played_By (Team_Name, Match_Timestamp, Result) VALUES
+('Kolkata Knight Riders', '2025-03-22 19:30:00', 'Lost'),
+('Royal Challengers Bangalore', '2025-03-22 19:30:00', 'Won');
+
+
+-- =============================================
+-- Performance Table Data for Match-1
+-- =============================================
+INSERT INTO Performance (Player_Name, Match_Timestamp, Runs_Scored, Runs_Conceded, Wickets, Fours, Sixes, Balls_Faced, Balls_Bowled) VALUES
+-- Kolkata Knight Riders
+('Quinton de Kock', '2025-03-22 19:30:00', 4, NULL, NULL, 1, 0, 5, NULL),
+('Sunil Narine', '2025-03-22 19:30:00', 44, 27, 1, 5, 3, 26, 24),
+('Ajinkya Rahane', '2025-03-22 19:30:00', 56, NULL, NULL, 6, 4, 31, NULL),
+('Venkatesh Iyer', '2025-03-22 19:30:00', 6, NULL, 0, 1, 0, 7, NULL),
+('Angkrish Raghuvanshi', '2025-03-22 19:30:00', 30, NULL, NULL, 2, 1, 22, NULL),
+('Rinku Singh', '2025-03-22 19:30:00', 12, NULL, NULL, 1, 0, 10, NULL),
+('Andre Russell', '2025-03-22 19:30:00', 4, NULL, NULL, 1, 0, 3, NULL),
+('Ramandeep Singh', '2025-03-22 19:30:00', 6, NULL, NULL, 0, 0, 9, NULL),
+('Harshit Rana', '2025-03-22 19:30:00', 5, 32, 0, 1, 0, 6, 18),
+('Spencer Johnson', '2025-03-22 19:30:00', 1, 31, 0, 0, 0, 1, 14),
+('Varun Chakravarthy', '2025-03-22 19:30:00', 0, 43, 1, 0, 0, 0, 24),
+('Vaibhav Arora', '2025-03-22 19:30:00', 0, 42, 1, 0, 0, 0, 18),
+-- Royal Challengers Bengaluru
+('Phil Salt', '2025-03-22 19:30:00', 56, NULL, NULL, 9, 2, 31, NULL),
+('Virat Kohli', '2025-03-22 19:30:00', 59, NULL, NULL, 4, 3, 36, NULL),
+('Devdutt Padikkal', '2025-03-22 19:30:00', 10, NULL, NULL, 1, 0, 10, NULL),
+('Rajat Patidar', '2025-03-22 19:30:00', 34, NULL, NULL, 5, 1, 16, NULL),
+('Liam Livingstone', '2025-03-22 19:30:00', 15, 14, 0, 2, 1, 5, 12),
+('Josh Hazlewood', '2025-03-22 19:30:00', 0, 22, 2, 0, 0, 0, 24),
+('Yash Dayal', '2025-03-22 19:30:00', 0, 25, 1, 0, 0, 0, 18),
+('Rasikh Salam', '2025-03-22 19:30:00', 0, 35, 1, 0, 0, 0, 18),
+('Krunal Pandya', '2025-03-22 19:30:00', 0, 29, 3, 0, 0, 0, 24),
+('Suyash Sharma', '2025-03-22 19:30:00', 0, 47, 1, 0, 0, 0, 24);
+
+
+-- =============================================
+-- Match-2 Table Data (Sunrisers Hyderabad vs Rajasthan Royals)
+-- =============================================
+INSERT INTO Match (Match_Timestamp, Type, Stadium_Name, Man_Of_The_Match)
+VALUES ('2025-03-23 15:30:00', 'League', 'Rajiv Gandhi International Stadium', 'Ishan Kishan');
+
+
+-- =============================================
+-- Played_By Table Data for Match-2
+-- =============================================
+INSERT INTO Played_By (Team_Name, Match_Timestamp, Result) VALUES
+('Sunrisers Hyderabad', '2025-03-23 15:30:00', 'Won'),
+('Rajasthan Royals', '2025-03-23 15:30:00', 'Lost');
+
+
+-- =============================================
+-- Performance Table Data for Match-2
+-- =============================================
+INSERT INTO Performance (Player_Name, Match_Timestamp, Runs_Scored, Runs_Conceded, Wickets, Fours, Sixes, Balls_Faced, Balls_Bowled) VALUES
+-- Sunrisers Hyderabad
+('Abhishek Sharma', '2025-03-23 15:30:00', 24, 17, 0, 1, 5, 11, 12),
+('Travis Head', '2025-03-23 15:30:00', 67, NULL, NULL, 9, 3, 31, NULL),
+('Ishan Kishan', '2025-03-23 15:30:00', 106, NULL, NULL, 11, 6, 47, NULL),
+('Nitish Kumar Reddy', '2025-03-23 15:30:00', 30, NULL, NULL, 4, 1, 15, NULL),
+('Heinrich Klaasen', '2025-03-23 15:30:00', 34, NULL, NULL, 5, 1, 14, NULL),
+('Aniket Verma', '2025-03-23 15:30:00', 7, NULL, NULL, 0, 1, 3, NULL),
+('Abhinav Manohar', '2025-03-23 15:30:00', 0, NULL, NULL, 0, 0, 1, NULL),
+('Pat Cummins', '2025-03-23 15:30:00', 0, 60, 1, 0, 0, 1, 24),
+('Simarjeet Singh', '2025-03-23 15:30:00', 0, 46, 2, 0, 0, 0, 18),
+('Harshal Patel', '2025-03-23 15:30:00', 0, 34, 2, 0, 0, 0, 24),
+('Mohammed Shami', '2025-03-23 15:30:00', 0, 33, 1, 0, 0, 0, 18),
+('Adam Zampa', '2025-03-23 15:30:00', 0, 48, 1, 0, 0, 0, 24),
+-- Rajasthan Royals
+('Yashasvi Jaiswal', '2025-03-23 15:30:00', 1, NULL, NULL, 0, 0, 5, NULL),
+('Sanju Samson', '2025-03-23 15:30:00', 66, NULL, NULL, 7, 4, 37, NULL),
+('Riyan Parag', '2025-03-23 15:30:00', 4, NULL, NULL, 1, 0, 2, NULL),
+('Nitish Rana', '2025-03-23 15:30:00', 11, 9, 0, 2, 0, 8, 6),
+('Dhruv Jurel', '2025-03-23 15:30:00', 70, NULL, NULL, 5, 6, 35, NULL),
+('Shimron Hetmyer', '2025-03-23 15:30:00', 42, NULL, NULL, 1, 4, 23, NULL),
+('Shubham Dubey', '2025-03-23 15:30:00', 34, NULL, NULL, 1, 4, 11, NULL),
+('Jofra Archer', '2025-03-23 15:30:00', 1, 76, 1, 0, 0, 1, 24),
+('Sandeep Sharma', '2025-03-23 15:30:00', 0, 51, 1, 0, 0, 0, 24),
+('Tushar Deshpande', '2025-03-23 15:30:00', 0, 44, 3, 0, 0, 0, 24),
+('Maheesh Theekshana', '2025-03-23 15:30:00', 0, 52, 2, 0, 0, 0, 24),
+('Fazalhaq Farooqi', '2025-03-23 15:30:00', 0, 49, 0, 0, 0, 0, 18);
+
+
+-- =============================================
+-- Match-3 Table Data (Chennai Super Kings vs Mumbai Indians)
+-- =============================================
+INSERT INTO Match (Match_Timestamp, Type, Stadium_Name, Man_Of_The_Match)
+VALUES ('2025-03-23 19:30:00', 'League', 'M. A. Chidambaram Stadium', 'Noor Ahmad');
+
+
+-- =============================================
+-- Played_By Table Data for Match-3
+-- =============================================
+INSERT INTO Played_By (Team_Name, Match_Timestamp, Result) VALUES
+('Mumbai Indians', '2025-03-23 19:30:00', 'Lost'),
+('Chennai Super Kings', '2025-03-23 19:30:00', 'Won');
+
+
+-- =============================================
+-- Performance Table Data for Match-3
+-- =============================================
+INSERT INTO Performance (Player_Name, Match_Timestamp, Runs_Scored, Runs_Conceded, Wickets, Fours, Sixes, Balls_Faced, Balls_Bowled) VALUES
+-- Mumbai Indians
+('Rohit Sharma', '2025-03-23 19:30:00', 0, NULL, NULL, 0, 0, 4, NULL),
+('Ryan Rickelton', '2025-03-23 19:30:00',  13, NULL, NULL, 3, 0, 7, NULL),
+('Will Jacks', '2025-03-23 19:30:00',  11, 32, 1, 2, 0, 7, 24),
+('Suryakumar Yadav', '2025-03-23 19:30:00',  29, NULL, NULL, 2, 1, 26, NULL),
+('Tilak Varma', '2025-03-23 19:30:00',  31, NULL, NULL, 2, 2, 25, NULL),
+('Robin Minz', '2025-03-23 19:30:00',  3, NULL, NULL, 0, 0, 9, NULL),
+('Naman Dhir', '2025-03-23 19:30:00',  17, 12, 0, 1, 0, 12, 18),
+('Mitchell Santner', '2025-03-23 19:30:00',  11, 24, 0, 1, 0, 13, 13),
+('Deepak Chahar', '2025-03-23 19:30:00',  28, 18, 1, 2, 2, 15, 12),
+('Trent Boult', '2025-03-23 19:30:00', 1, 27, 0, 0, 0, 2, 18),
+('Satyanarayana Raju', '2025-03-23 19:30:00', 1, 13, 0, 0, 0, 1, 6),
+('Vignesh Puthur', '2025-03-23 19:30:00', 0, 32, 3, NULL, NULL, NULL, 24),
+-- Chennai Super Kings
+('Rachin Ravindra', '2025-03-23 19:30:00', 65, NULL, NULL, 2, 4, 45, NULL),
+('Rahul Tripathi', '2025-03-23 19:30:00', 2, 0, 0, 0, 0, 3, 0),
+('Ruturaj Gaikwad', '2025-03-23 19:30:00', 53, NULL, NULL, 6, 3, 26, NULL),
+('Shivam Dube', '2025-03-23 19:30:00', 9, NULL, NULL, 0, 1, 7, NULL),
+('Deepak Hooda', '2025-03-23 19:30:00', 3, NULL, NULL, 0, 0, 5, NULL),
+('Sam Curran', '2025-03-23 19:30:00', 4, 13, 0, 0, 0, 9, 6),
+('Ravindra Jadeja', '2025-03-23 19:30:00', 17, 21, 0, 1, 0, 18, 18),
+('MS Dhoni', '2025-03-23 19:30:00', 0, NULL, NULL, 0, 0, 2, NULL),
+('Ravichandran Ashwin', '2025-03-23 19:30:00', 0, 31, 1, NULL, NULL, NULL, 24),
+('Noor Ahmad', '2025-03-23 19:30:00', 0, 18, 4, NULL, NULL, NULL, 24),
+('Nathan Ellis', '2025-03-23 19:30:00', 0, 38, 1, NULL, NULL, NULL, 24),
+('Khaleel Ahmed', '2025-03-23 19:30:00', 0, 29, 3, NULL, NULL, NULL, 24);
+
+
+-- =============================================
+-- Match-4 Table Data(Delhi Capitals vs Lucknow Super Giants)
+-- =============================================
+INSERT INTO Match (Match_Timestamp, Type, Stadium_Name, Man_Of_The_Match)
+VALUES ('2025-03-24 19:30:00', 'League', 'ACA-VDCA Stadium', 'Ashutosh Sharma');
+ 
+
+-- =============================================
+-- Played_By Table Data for Match 4
+-- =============================================
+INSERT INTO Played_By (Team_Name, Match_Timestamp, Result) VALUES
+('Delhi Capitals', '2025-03-24 19:30:00', 'Won'),
+('Lucknow Super Giants', '2025-03-24 19:30:00', 'Lost');
+ 
+
+-- =============================================
+-- Performance Table Data for Match 4
+-- =============================================
+INSERT INTO Performance (Player_Name, Match_Timestamp, Runs_Scored, Runs_Conceded, Wickets, Fours, Sixes, Balls_Faced, Balls_Bowled) VALUES
+-- Delhi Capitals
+('Jake Fraser-McGurk', '2025-03-24 19:30:00', 1, NULL, NULL, 0, 0, 2, NULL),
+('Faf du Plessis', '2025-03-24 19:30:00', 29, NULL, NULL, 3, 2, 18, NULL),
+('Abhishek Porel', '2025-03-24 19:30:00', 0, NULL, NULL, 0, 0, 2, NULL),
+('Sameer Rizvi', '2025-03-24 19:30:00', 4, NULL, NULL, 1, 0, 4, NULL),
+('Axar Patel', '2025-03-24 19:30:00', 22, 18, 0, 3, 1, 11, 18),
+('Ashutosh Sharma', '2025-03-24 19:30:00', 61, NULL, NULL, 5, 5, 31, NULL),
+('Mitchell Starc', '2025-03-24 19:30:00', 2, 42, 3, 0, 0, 5, 24),
+('Vipraj Nigam', '2025-03-24 19:30:00', 39, 35, 1, 5, 2, 15, 12),
+('Mukesh Kumar', '2025-03-24 19:30:00', 0, 22, 1, 0, 0, NULL, 12),
+('Mohit Sharma', '2025-03-24 19:30:00', 1, 42, 0, 0, 0, 2, 24),
+('Tristan Stubbs', '2025-03-24 19:30:00', 34, 24, 0, 1, 3, 22, 6),
+('Kuldeep Yadav', '2025-03-24 19:30:00', 5, 20, 2, 1, 0, 5, 24),
+
+-- Lucknow Super Giants
+('David Miller', '2025-03-24 19:30:00', 27, NULL, NULL, 1, 2, 19, NULL),
+('Rishabh Pant', '2025-03-24 19:30:00', 0, NULL, NULL, 0, 0, 6, NULL),
+('Mitchell Marsh', '2025-03-24 19:30:00', 72, NULL, NULL, 6, 6, 36, NULL),
+('Shahbaz Ahmed', '2025-03-24 19:30:00', 9, 22, 0, 1, 0, 8, 9),
+('Aiden Markram', '2025-03-24 19:30:00', 15, NULL, NULL, 1, 1, 13, NULL),
+('Shardul Thakur', '2025-03-24 19:30:00', 0, 19, 2, 0, 0, 2, 12),
+('Nicholas Pooran', '2025-03-24 19:30:00',75, NULL, NULL, 6, 7, 30, NULL),
+('Ayush Badoni', '2025-03-24 19:30:00',4, NULL, NULL, 0, 0, 5, NULL),
+('Ravi Bishnoi', '2025-03-24 19:30:00',0, 53, 2, 0, 0, 2, 24),
+('Digvesh Singh', '2025-03-24 19:30:00',0, 31, 2, 0, 0, 0, 24),
+('Manimaran Siddharth', '2025-03-24 19:30:00', 0, 29, 2, 0, 0, NULL, 24),
+('Prince Yadav', '2025-03-24 19:30:00', 0, 47, 0, 0, 0, NULL, 24);
+
+ 
+-- =============================================
+-- Match-5 Table Data (Punjab Kings vs Gujarat Titans)
+-- =============================================
+INSERT INTO Match (Match_Timestamp, Type, Stadium_Name, Man_Of_The_Match)
+VALUES ('2025-03-25 19:30:00', 'League', 'Narendra Modi Stadium', 'Shreyas Iyer');
+ 
+
+-- =============================================
+-- Played_By Table Data for Match 5
+-- =============================================
+INSERT INTO Played_By (Team_Name, Match_Timestamp, Result) VALUES
+('Punjab Kings', '2025-03-25 19:30:00', 'Won'),
+('Gujarat Titans', '2025-03-25 19:30:00', 'Lost');
+ 
+
+-- =============================================
+-- Performance Table Data for Match 5
+-- =============================================
+INSERT INTO Performance (Player_Name, Match_Timestamp, Runs_Scored, Runs_Conceded, Wickets, Fours, Sixes, Balls_Faced, Balls_Bowled) VALUES
+-- Punjab Kings
+('Priyansh Arya', '2025-03-25 19:30:00', 47, NULL, NULL, 7, 2, 23, NULL),
+('Prabhsimran Singh', '2025-03-25 19:30:00', 5, NULL, NULL, 1, 0, 8, NULL),
+('Shreyas Iyer', '2025-03-25 19:30:00', 97, NULL, NULL, 5, 9, 42, NULL),
+('Azmatullah Omarzai', '2025-03-25 19:30:00', 16, 29, 0, 2, 1, 15, 12),
+('Glenn Maxwell', '2025-03-25 19:30:00', 0, 26, 1, 0, 0, 1, 12),
+('Marcus Stoinis', '2025-03-25 19:30:00', 20, 31, 0, 1, 2, 15, 12),
+('Shashank Singh', '2025-03-25 19:30:00', 44, NULL, NULL, 6, 2, 16, NULL),
+('Marco Jansen', '2025-03-25 19:30:00', 0, 44, 1, 0, 0, NULL, 24),
+('Arshdeep Singh', '2025-03-25 19:30:00', 0, 36, 2, 0, 0, NULL, 24),
+('Yuzvendra Chahal', '2025-03-25 19:30:00', 0, 34, 0, 0, 0, NULL, 18),
+('Vijaykumar Vyshak', '2025-03-25 19:30:00', 0, 28, 0, 0, 0, NULL, 18),
+
+-- Gujarat Titans
+('Sai Sudharsan', '2025-03-25 19:30:00', 74, NULL, NULL, 5, 6, 41, NULL),
+('Shubman Gill', '2025-03-25 19:30:00', 33, NULL, NULL, 2, 3, 14, NULL),
+('Jos Buttler', '2025-03-25 19:30:00', 54, NULL, NULL, 4, 2, 33, NULL),
+('Sherfane Rutherford', '2025-03-25 19:30:00', 46, NULL, NULL, 4, 3, 28, NULL),
+('Rahul Tewatia', '2025-03-25 19:30:00', 6, NULL, NULL, 0, 1, 2, NULL),
+('Shahrukh Khan', '2025-03-25 19:30:00', 6, NULL, NULL, 0, 1, 1, NULL),
+('Arshad Khan', '2025-03-25 19:30:00', 1, 21, 0, 0, 0, 1, 6),
+('Mohammed Siraj', '2025-03-25 19:30:00', 0, 54, 0, 0, 0, NULL, 24),
+('Kagiso Rabada', '2025-03-25 19:30:00', 0, 41, 1, 0, 0, NULL, 24),
+('Rashid Khan', '2025-03-25 19:30:00', 0, 48, 1, 0, 0, NULL, 24),
+('Prasidh Krishna', '2025-03-25 19:30:00', 0, 41, 0, 0, 0, NULL, 18),
+('Sai Kishore', '2025-03-25 19:30:00', 0, 30, 3, 0, 0, NULL, 24);
+
+
+-- =============================================
+-- official Table Data
+-- =============================================
+INSERT INTO official (name, salary, experience)
+VALUES
+    ('Ashutosh', 3000000, 3),
+    ('Jim', 4000000, 10),
+    ('Hafeez', 2000000, 2),
+    ('Ankit', 5000000, 12);
+
+
+-- =============================================
+-- Officiated_by Table Data
+-- =============================================
+INSERT INTO officiated_by (official_name, match_timestamp)
+VALUES
+    ('Ashutosh', '2025-03-22 19:30:00'),
+    ('Jim', '2025-03-22 19:30:00'),
+    ('Hafeez', '2025-03-23 15:30:00'),
+    ('Ankit', '2025-03-23 15:30:00'),
+    ('Ashutosh', '2025-03-23 19:30:00'),
+    ('Jim', '2025-03-23 19:30:00'),
+    ('Hafeez', '2025-03-24 19:30:00'),
+    ('Ankit', '2025-03-24 19:30:00'),
+    ('Ashutosh', '2025-03-25 19:30:00'),
+    ('Jim', '2025-03-25 19:30:00');
+

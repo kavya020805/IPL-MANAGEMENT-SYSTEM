@@ -1,0 +1,235 @@
+SQL Queries:
+
+
+1. List All Players with Their Batting and Bowling Styles (Level: Easy)
+
+SELECT Player_Name, 
+       Batting_Style, 
+       Bowling_Style 
+FROM Player; 
+
+
+
+2. Retrieve All Coaches with More Than 10 Years of Experience (Level: Easy)
+
+SELECT Coach_Name, 
+       Country, 
+       Experience_Years 
+FROM Coach 
+WHERE Experience_Years > 10; 
+
+
+
+3. Find Team Names and Their Coach Names for a Given Season (Level: Medium) 
+
+SELECT r.Team_Name, 
+       r.Year, 
+       c.Coach_Name, 
+       c.Country 
+FROM Registers r 
+JOIN Coach c ON r.Coach_Name = c.Coach_Name 
+WHERE r.Year = 2025;  
+
+
+
+4. Calculate the Average Runs Scored by Each Player Across All Matches (Level: Medium/Advanced (Aggregation)) 
+
+SELECT Player_Name, 
+       AVG(Runs_Scored) AS Avg_Runs 
+FROM Performance 
+GROUP BY Player_Name; 
+
+
+
+5. List Officials Who Have Officiated More Than 2 Matches (Level: Advanced (Aggregation with Join))
+
+SELECT o.Name, 
+       COUNT(ob.Match_Timestamp) AS Matches_Officiated 
+FROM Official o 
+JOIN Officiated_By ob ON o.Name = ob.Official_Name 
+GROUP BY o.Name 
+HAVING COUNT(ob.Match_Timestamp) > 2; 
+
+
+
+6. Find Players Who Scored More Than the Average Runs Across All Matches (Level: Advanced (Subquery))
+
+SELECT p.Player_Name, 
+       SUM(per.Runs_Scored) AS Total_Runs 
+FROM Performance per 
+JOIN Player p ON per.Player_Name = p.Player_Name 
+GROUP BY p.Player_Name 
+HAVING SUM(per.Runs_Scored) > (
+    SELECT AVG(Total_Runs) 
+    FROM (
+        SELECT SUM(Runs_Scored) AS Total_Runs 
+        FROM Performance 
+        GROUP BY Player_Name
+    ) AS sub
+); 
+
+
+
+7. List Teams with the Highest Winning Percentage (Level: Hard (Complex Aggregation))
+
+WITH TeamResults AS (
+    SELECT Team_Name, 
+           COUNT(*) AS Total_Matches, 
+           SUM(CASE WHEN Result = 'Won' THEN 1 ELSE 0 END) AS Wins 
+    FROM Played_By 
+    GROUP BY Team_Name
+), 
+WinPercentage AS (
+    SELECT Team_Name, 
+           Wins, 
+           Total_Matches, 
+           (CAST(Wins AS FLOAT) / Total_Matches) * 100 AS Win_Percentage 
+    FROM TeamResults
+) 
+SELECT Team_Name, 
+       Wins, 
+       Total_Matches, 
+       ROUND(Win_Percentage::numeric, 2) AS Win_Percentage 
+FROM WinPercentage 
+ORDER BY Win_Percentage DESC; 
+
+
+
+8. Teams That Won the Most Matches in a Given Season (Level: Medium (Aggregation with Join))
+
+SELECT pb.Team_Name, 
+       COUNT(*) AS Wins 
+FROM Played_By pb 
+JOIN Match m ON pb.Match_Timestamp = m.Match_Timestamp 
+WHERE pb.Result = 'Won' 
+  AND m.Match_Timestamp IN (
+      SELECT Match_Timestamp 
+      FROM Match 
+      WHERE EXTRACT(YEAR FROM Match_Timestamp) = 2025
+  ) 
+GROUP BY pb.Team_Name 
+ORDER BY Wins DESC; 
+
+
+
+9. Average Score Per Stadium (Level: Medium (Aggregation with Join))
+
+SELECT s.Stadium_Name, ROUND(AVG(per.Runs_Scored), 2) AS Avg_Score 
+FROM Stadium s 
+JOIN Match m ON s.Stadium_Name = m.Stadium_Name 
+JOIN Performance per ON m.Match_Timestamp = per.Match_Timestamp 
+GROUP BY s.Stadium_Name 
+ORDER BY Avg_Score DESC; 
+
+
+
+10. Highest Team Spending on Players (Level: Medium (Aggregation))
+
+SELECT Team_Name, Year, SUM(Final_Price) AS Total_Spent 
+FROM PlayedIn 
+GROUP BY Team_Name, Year 
+ORDER BY Total_Spent DESC 
+LIMIT 1; 
+
+
+
+11. Teams with Most Sixes in a Season (Level: Advanced (Complex Join))
+
+SELECT pi.Team_Name, pi.Year, SUM(pf.Sixes) AS Total_Sixes 
+FROM PlayedIn pi 
+JOIN Performance pf ON pi.Player_Name = pf.Player_Name 
+JOIN Match m ON pf.Match_Timestamp = m.Match_Timestamp 
+WHERE EXTRACT(YEAR FROM m.Match_Timestamp) = pi.Year 
+GROUP BY pi.Team_Name, pi.Year 
+ORDER BY Total_Sixes DESC; 
+
+
+
+12. High-Scoring Matches by Stadium (Level: Advanced (Subquery))
+
+SELECT DISTINCT m.Stadium_Name, m.Match_Timestamp 
+FROM Match m 
+JOIN Performance p ON m.Match_Timestamp = p.Match_Timestamp 
+WHERE m.Match_Timestamp IN (
+    SELECT Match_Timestamp 
+    FROM Performance 
+    WHERE Runs_Scored >= 50 
+    GROUP BY Match_Timestamp 
+    HAVING COUNT(*) >= 2
+); 
+
+
+
+13. Bowler Performance in a Match (Level: Medium (Aggregation))
+
+SELECT p.Player_Name, SUM(p.Wickets) AS Total_Wickets 
+FROM Performance p 
+JOIN PlayedIn pi ON p.Player_Name = pi.Player_Name 
+WHERE p.Match_Timestamp = '2025-03-24 19:30:00' 
+  AND p.Wickets > 0 
+GROUP BY p.Player_Name; 
+
+
+
+14. Team-wise Match Runs (Level: Medium (Aggregation with Join))
+
+SELECT t.Team_Name, SUM(p.Runs_Scored) AS Total_Runs 
+FROM Performance p 
+JOIN PlayedIn pi ON p.Player_Name = pi.Player_Name 
+JOIN Team t ON pi.Team_Name = t.Team_Name 
+WHERE p.Match_Timestamp = '2025-03-23 15:30:00' 
+GROUP BY t.Team_Name; 
+
+
+
+15. Team Players Match Performance (Level: Medium (Simple Join))
+
+SELECT p.Player_Name, p.Runs_Scored, pi.Team_Name 
+FROM Performance p 
+JOIN PlayedIn pi ON p.Player_Name = pi.Player_Name 
+WHERE p.Match_Timestamp = '2025-03-23 15:30:00' 
+  AND pi.Team_Name = 'Rajasthan Royals'; 
+
+
+
+16. Top Scorer at Stadium (Level: Medium (Aggregation))
+
+SELECT player_name, SUM(PERFORMANCE.RUNS_SCORED) as Total_runs 
+FROM PERFORMANCE 
+NATURAL JOIN MATCH 
+WHERE MATCH.STADIUM_NAME = 'M. A. Chidambaram Stadium' 
+GROUP BY PERFORMANCE.PLAYER_NAME 
+ORDER BY Total_runs DESC 
+LIMIT 1; 
+
+
+
+17. Overall Top Run Scorer (Level: Easy (Aggregation))
+
+SELECT Player_Name, SUM(Runs_Scored) AS Total_Runs 
+FROM Performance 
+GROUP BY Player_Name 
+ORDER BY Total_Runs DESC 
+LIMIT 1;
+
+
+
+18. Most Frequent Title Sponsor (Level: Easy (Aggregation))
+
+SELECT Title_Sponsor, 
+       COUNT(*) AS Sponsor_Count 
+FROM Season 
+GROUP BY Title_Sponsor 
+ORDER BY Sponsor_Count DESC 
+LIMIT 1; 
+
+
+
+19. Top Wicket Taker (Level: Easy (Aggregation))
+
+SELECT Player_Name, 
+       SUM(Wickets) AS Total_Wickets 
+FROM Performance 
+GROUP BY Player_Name 
+ORDER BY Total_Wickets DESC 
+LIMIT 1;
