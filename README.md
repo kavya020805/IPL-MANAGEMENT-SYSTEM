@@ -6,7 +6,7 @@ A comprehensive database management system built to handle the operations and da
 
 ## 📌 Objective
 
-Design and implement a **PostgreSQL**-based relational database to manage IPL tournaments. This includes capturing data related to players, teams, matches, stadiums, sponsors, coaches, and officials — while ensuring efficient querying and reporting through normalization (up to BCNF).
+Design and implement a **PostgreSQL**-based relational database to manage IPL tournaments. This includes capturing data related to players, teams, matches, stadiums, sponsors, coaches, and officials, while ensuring efficient querying and reporting through normalization (up to BCNF).
 
 ---
 
@@ -51,7 +51,7 @@ Design and implement a **PostgreSQL**-based relational database to manage IPL to
 - Player Stats: Runs, wickets, strike rate, boundaries, etc.
 - Match Info: Type, venue, umpires, man of the match, etc.
 - Season Details: Title sponsors, winning & runner-up teams, MVPs.
-- Team Info: Coaches, owners, auctioned players, finances.
+- Team Info: Coaches, owners, auctioned players, and finances.
 - Stadium Attributes: Name, city, pitch conditions, capacity.
 
 ---
@@ -90,6 +90,4 @@ The system includes custom report generation for:
 This project offers a scalable, normalized, and query-optimized system to manage the complete lifecycle of the Indian Premier League — empowering fans, teams, players, and officials through efficient data access and analysis.
 
 ---
-
-## 📂 Repository Structure
 
